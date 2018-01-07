@@ -1,4 +1,9 @@
 var nodemailer = require('nodemailer');
+
+var mongoose   = require('mongoose');
+\
+mongoose.connect("mongodb://localhost/wis");
+
 var transporter = nodemailer.createTransport({
     service: 'Gmail',
     auth: {
@@ -14,3 +19,9 @@ transporter.sendMail({
     subject: 'hello world!',
     text: 'hello world!'
 });
+
+
+var sendEmail = function()
+{
+
+}
